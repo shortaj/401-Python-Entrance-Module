@@ -13,19 +13,17 @@ import random
 class teacher(object):
     """docstring for teacher."""
     def __init__(self, name, grade, **kargs):
-        # super().__init__(**kargs)
         self.name = name
         self.grade = grade
         self.students = []
-        def __repr__(self):
-            return 'asd'
 
 class student(object):
     """docstring for student."""
     def __init__(self, name, teacher, **kargs):
         self.name = name
-        self.gpa = random.randint(0,100)
         self.teacher = teacher
+        self.gpa = random.randint(0,100)
+        self.grade = teacher.grade
 
 
 teacher_Names = ['Mrs. Janet', 'Mr. Wallace', 'Miss Molly', 'Mr. Rodgers', 'Miss Rooney', 'Mr. Edwin', 'Mrs. Ruth', 'Mr. Richards', 'Mr.Evans', 'Mrs.Karkins', 'Mrs.Tae', 'Mr.Ruby', 'Mr.Stone', 'Ms. Schafer', 'Mrs. Finney']
@@ -39,7 +37,4 @@ for clsroom in school:
     for i in range(0, 3):
         cur_studnt = student(student_Names.pop(), clsroom)
         clsroom.students.append(cur_studnt)
-for p in school:
-    print p
-for p in clsroom:
-    print p
+        

@@ -9,6 +9,7 @@ import random
 # 3. Teachers should have names and grade levels, and should be able to have multiple students.
 # 4. A teacher should have no more than 10 students.
 # 5. If there are no teachers, there should be no students.
+print('The school of Ratberg has the following teachers; ')
 
 class teacher(object):
     """docstring for teacher."""
@@ -16,6 +17,7 @@ class teacher(object):
         self.name = name
         self.grade = grade
         self.students = []
+        # print(name + "who teaches grade " + grade + " and who's students are " + self.students)
 
 class student(object):
     """docstring for student."""
@@ -24,6 +26,7 @@ class student(object):
         self.teacher = teacher
         self.gpa = random.randint(0,100)
         self.grade = teacher.grade
+        # print('The student, ' + name + ', has a ' + self.gpa + ' GPA, and they are taught by ' + teacher + ', who teaches ' + self.grade)
 
 
 teacher_Names = ['Mrs. Janet', 'Mr. Wallace', 'Miss Molly', 'Mr. Rodgers', 'Miss Rooney', 'Mr. Edwin', 'Mrs. Ruth', 'Mr. Richards', 'Mr.Evans', 'Mrs.Karkins', 'Mrs.Tae', 'Mr.Ruby', 'Mr.Stone', 'Ms. Schafer', 'Mrs. Finney']
@@ -37,4 +40,3 @@ for clsroom in school:
     for i in range(0, 3):
         cur_studnt = student(student_Names.pop(), clsroom)
         clsroom.students.append(cur_studnt)
-        
